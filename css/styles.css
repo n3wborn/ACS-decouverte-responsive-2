@@ -38,14 +38,25 @@
   font-style: normal;
 }
 
-.rubik20 {font-family: rubik-medium;font-weight: 1.25rem;}
+.rubik20 {font-family: rubik-medium;
+	font-weight: 1.25rem;
+
+}
 
 .rubik15 {
 	font-family: rubik-regular;
-	font-weight: 0.94rem;}
+	font-weight: 0.94rem;
+	line-height: 2;
+}
+
+.rubk15-18 {
+	font-family: rubik-regular;
+	font-weight: 0.94rem;
+	line-height: 2;
+}
 
 
-/************
+	/************
  * COULEURS
  */
 
@@ -78,6 +89,30 @@ body {
 
 footer {margin: auto;}
 
+h3 {
+	font-family: rubik-medium;
+	color: var(--blanc);
+	margin-bottom: 30px;
+}
+
+a:hover{color: var(--orange);}
+
+p, a {
+	text-decoration: none;
+	color: var(--blanc);
+	font-family: rubik-regular;
+}
+
+/* lorem sous logo */
+.lorem {
+	padding: 30px 10px;
+}
+
+/* liste - ancres*/
+ul, li {list-style: none;}
+
+
+/* logo */
 #logo {
 	background-image: url("img/logo.png");
 	width: 78px;
@@ -86,25 +121,40 @@ footer {margin: auto;}
 	background-size: contain;
 }
 
-h3 {
-	font-family: rubik-medium;
-	color: var(--blanc);
+
+/* formulaire */
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
-p, a {
-	text-decoration: none;
-	color: var(--blanc);
-	font-family: rubik-regular;
+#input-usr-mail {
+	display: block;
+	width: 300px;
+	height: 56px;
+	border: 1px solid #707070;
+	border-radius: 28px;
+	padding-left: 25px;
 }
 
-ul, li {list-style: none;}
+#submit-btn {
+	display: block;
+	width: 140px;
+	height: 56px;
+	background-color: var(--bleu);
+	color: var(--blanc);
+	border: 1px solid #707070;
+	border-radius: 28px;
+}
 
-a:hover{color: var(--orange);}
 #submit-btn:hover {
 	background-color: var(--orange);
-	color: white;
+	color: var(--blanc);
 	box-shadow: 0px 14px 21px rgba(255, 132, 0, 0.22);
 }
+
 
 /************
  * FLEX
@@ -117,17 +167,17 @@ a:hover{color: var(--orange);}
 .justify-content-center {justify-content: center;}
 .align-items-center {align-items: center;}
 
-
+#social-wrapper {padding-top: 70px;}
 #about-us {flex: 0 0 30%;}
-#social {max-width: 1230px; margin: 0 auto;}
+#social {max-width: 1230px; margin: 0 auto; padding-bottom: }
 #general {flex: 0 0 15%;}
 #important-links {flex: 0 0 15%;}
 #connect-us {flex: 0 0 30%;}
 #legal-infos {max-width: 1230px; margin: auto;}
-#legal-infos>div:nth-child(1) {flex: 0 0 50%;}
-#legal-infos>div:nth-child(2) {flex: 0 0 50%;}
+#legal-infos>p:nth-child(1) {flex: 0 0 50%;}
+#legal-infos>div {flex: 0 0 50%; padding: 40px auto; margin: auto;}
 
-#social-wrapper {padding-top: 70px;}
+
 /************
  * RESPONSIVE
  */
